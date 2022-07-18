@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v8 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/sourcesanspro-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}"/>
+</head>
+<body class="form-v8">
+
+	
+	<div class="page-content">
+		<header id="header">
+			<nav>
+				<h5><b style="color:rgb(59, 67, 67)">&nbsp; Click on the logo to go homepage</b></h5>
+				<div class="logo">
+					<a href="{% url 'index' %}">
+	
+						<img src="{% static 'images/icon/logo (3).png' %}" alt="logo">
+						
+					</a>
+	
+			</nav>
+		
+	
+		</header>
+		<div class="form-v8-content">
+			
+			{% if profile %}
+							<div class="form-left">
+				<img src={{profile.Profile.url}} alt="form" width="100%">
+			</div>
+			<div class="form-right">
+				<div class="tab">
+					<div class="tab-inner">
+						<button class="tablinks" onclick="openCity(event, 'sign-up')" id="defaultOpen">{{profile.FULLNAME}}_Details</button>
+					</div>
+					</div>
+				<!-- <form class="form-detail" action="#" method="post"> -->
+				
+				
+					
+					<div class="tabcontent" id="sign-up">
+						<div class="form-row">
+							<label class="form-row-inner">
+								<!-- <input type="" name="full_name" id="full_name" class="input-text" required> -->
+								<span class="label" aria-readonly="true">{{profile.FULLNAME}}</span>
+		  						<span class="border"></span>
+							</label>
+
+							<br><br>
+						</div>
+						<div class="form-row">
+							<label class="form-row-inner">
+								<!-- <input type="" name="your_email" id="your_email" class="input-text" required readonly> -->
+								<span class="label">{{profile.EMAIL_ADDRESS}}</span>
+		  						<span class="border"></span>
+							</label>
+						</div>
+
+						<br><br>
+						<div class="form-row">
+							<label class="form-row-inner">
+								<!-- <input type="" name="password" id="password" class="input-text" required> -->
+								<span class="label" >{{profile.PASSWORD}}</span>
+								<span class="border"></span>
+							</label>
+						</div>
+
+						<br><br>
+								<form action="{% url 'delete' id=profile.id %}" method="post" >
+									{% csrf_token %}
+									<input type="submit" value="DELETE">
+						 		 </form>
+				
+				
+					
+					
+						{% endif %}
+					</div>
+				<!-- </form> -->
+				
+			</div>
+		</div>
+	</div>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

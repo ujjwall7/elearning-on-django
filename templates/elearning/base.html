@@ -1,0 +1,94 @@
+{% load static %}
+
+<!-- index Navigation bar -->
+
+{% block indexnavigationbar %}
+    
+{% endblock indexnavigationbar %}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- some popular subjects navigation subjects -->
+
+<!-- NAVIGATION -->
+	<header>
+		<div class="nav" id="nav">
+			<div id="echelon-logo">
+			<a href="{% url 'index' %}"><img src="{% static 'images/icon/logo.png' %}" style="width: 120px;"></a></div>
+			<div class="switch-tab" id="switch-tab" onclick="switchTAB()"><img src="{% static 'images/icon/menu.png' %}"></div>
+			<ul id="list-switch">
+				<li><a href="{% url 'courses' %}"><img src="{% static 'images/courses/d1.png' %}" class="icon">JEE</a></li>
+				<li><a href="#"><img src="{% static 'images/courses/paper.png' %}" class="icon">GATE</a></li>
+				<li><a href="{% url 'courses' %}"><img src="{% static 'images/courses/computer.png' %}" class="icon">Computer Courses</a></li>
+				<li><a href="{% url 'courses' %}"><img src="{% static 'images/courses/data.png' %}" class="icon">Data Structures</a></li>
+				<li><a href="{% url 'courses' %}"><img src="{% static 'images/courses/algo.png' %}" class="icon">Algorithm</a></li>
+				<li><a href="{% url 'courses' %}"><img src="{% static 'images/courses/projects.png' %}" class="icon">Projects</a></li>
+			</ul>
+			<div class="search" id="search-switch">
+				<input type="text" placeholder="Search" class="srch"><button id="srchbtn"><img src="{% static 'images/icon/search.png' %}"></button>
+			</div>
+		</div>
+	</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+        <div class="left-col">
+            <img src="{% static 'images/icon/logo - Copy.jpg' %}" style="width: 200px;">
+            <div class="logo"></div>
+            <div class="social-media">
+                <a href="#"><img src="{% static 'images/icon\fb.png' %}"></a>
+                <a href="#"><img src="{% static 'images/icon\insta.png' %}"></a>
+                <a href="#"><img src="{% static 'images/icon\tt.png' %}"></a>
+                <a href="#"><img src="{% static 'images/icon\ytube.png' %}"></a>
+                <a href="#"><img src="{% static 'images/icon\linkedin.png' %}"></a>
+            </div><br><br>
+            <p class="rights-text">Copyright © 2021 Created By Ujjwal Sharma, Shyam Kumar All Rights Reserved.</p>
+            <br><p><img src="{% static 'images/icon/location.png' %}"> Echelon Institute Of Technology <br>Faridabad, Haryana-121001</p><br>
+            <p><img src="{% static 'images/icon/phone.png' %}"> +91-78380 73454 , +91-129-3624-736<br><img src="{% static 'images/icon/mail.png' %}">&nbsp; sharmaujjwal0921@gmail.com &nbsp; , skbhagat8415@gmail.com</p>
+        </div>
+        <div class="right-col">
+            <h1 style="color: #fff">Our Newsletter</h1>
+            <div class="border"></div><br>
+            <p>Enter Your Email to get our News and updates.</p>
+            <form class="newsletter-form">
+                <input class="txtb" type="email" placeholder="Enter Your Email">
+                <input class="btn" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</footer>
